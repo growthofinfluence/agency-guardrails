@@ -10,9 +10,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/chris-fountoulis/agency-guardrails/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/chris-fountoulis/agency-guardrails/ci.yml?branch=main&style=for-the-badge&label=CI&color=0D1B4B&labelColor=F5A623" alt="CI status"></a>
-  <a href="https://github.com/chris-fountoulis/agency-guardrails/tags"><img src="https://img.shields.io/github/v/tag/chris-fountoulis/agency-guardrails?sort=semver&style=for-the-badge&label=release&color=0D1B4B&labelColor=F5A623" alt="Latest release"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/chris-fountoulis/agency-guardrails?style=for-the-badge&color=0D1B4B&labelColor=F5A623" alt="MIT license"></a>
+  <a href="https://github.com/growthofinfluence/agency-guardrails/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/growthofinfluence/agency-guardrails/ci.yml?branch=main&style=for-the-badge&label=CI&color=0D1B4B&labelColor=F5A623" alt="CI status"></a>
+  <a href="https://github.com/growthofinfluence/agency-guardrails/tags"><img src="https://img.shields.io/github/v/tag/growthofinfluence/agency-guardrails?sort=semver&style=for-the-badge&label=release&color=0D1B4B&labelColor=F5A623" alt="Latest release"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/growthofinfluence/agency-guardrails?style=for-the-badge&color=0D1B4B&labelColor=F5A623" alt="MIT license"></a>
   <a href="pyproject.toml"><img src="https://img.shields.io/badge/python-3.9%20to%203.13-0D1B4B?style=for-the-badge&labelColor=F5A623" alt="Python 3.9 to 3.13"></a>
   <a href="pyproject.toml"><img src="https://img.shields.io/badge/dependencies-none-0D1B4B?style=for-the-badge&labelColor=F5A623" alt="No dependencies"></a>
   <br>
@@ -52,6 +52,7 @@ ships, whether the author is an AI agent or a person. Built by [Chris Fountoulis
 - [Configuration](#configuration)
 - [Methodology](#methodology)
 - [Roadmap](#roadmap)
+- [Learn more and references](#learn-more-and-references)
 - [Contributing](#contributing)
 - [License](#license)
 - [About](#about)
@@ -105,8 +106,8 @@ Inside Claude Code the same findings reach the agent the moment it wirtes the fi
 ## 30-second quickstart
 
 ```bash
-pipx install git+https://github.com/chris-fountoulis/agency-guardrails   # or: pip install git+https://...
-git clone https://github.com/chris-fountoulis/agency-guardrails && cd agency-guardrails
+pipx install git+https://github.com/growthofinfluence/agency-guardrails   # or: pip install git+https://...
+git clone https://github.com/growthofinfluence/agency-guardrails && cd agency-guardrails
 guardrails check examples/site/bad      # a page an agent wrote: exits 1 with findings
 guardrails check examples/site/fixed    # the same page, fixed: exits 0
 ```
@@ -198,11 +199,11 @@ pre-commit hook. A rule written once runs in all of them.
 Install as a plugin (needs `python3` 3.9+ on the PATH, nothing else):
 
 ```text
-/plugin marketplace add chris-fountoulis/agency-guardrails
+/plugin marketplace add growthofinfluence/agency-guardrails
 /plugin install agency-guardrails@agency-guardrails
 ```
 
-Or in one step from a terminal: `claude plugin install agency-guardrails --marketplace chris-fountoulis/agency-guardrails`.
+Or in one step from a terminal: `claude plugin install agency-guardrails --marketplace growthofinfluence/agency-guardrails`.
 
 <details>
 <summary><b>Or wire the CLI into <code>.claude/settings.json</code></b></summary>
@@ -235,7 +236,7 @@ Or in one step from a terminal: `claude plugin install agency-guardrails --marke
 
 ```yaml
 - uses: actions/checkout@v7
-- uses: chris-fountoulis/agency-guardrails@v0.1.0
+- uses: growthofinfluence/agency-guardrails@v0.1.0
   with:
     paths: content site
     upload-sarif: "true"   # needs permissions: security-events: write
@@ -304,6 +305,31 @@ How the rules were built and how we know they work. The full write-up is in
 - Phrase lists for more EU languages in the `eu-marketing` pack, starting with Greek , German and French.
 - A `--changed` mode that checks only the lines a pull request touches.
 
+## Learn more and references
+
+**From Growth Of Influence**
+
+- [Answer engine optimization in 2026](https://growthofinfluence.com/aeo-answer-engine-optimization-2026/): the AEO rules this tool enforces
+- [Google AI Overviews in 2026](https://growthofinfluence.com/google-ai-overviews-2026/)
+- [Why a fully optimized website matters](https://growthofinfluence.com/why-a-fully-optimized-website-matters/)
+- [SEO services](https://growthofinfluence.com/seo/) and the [Search Engine](https://growthofinfluence.com/search-engine/), the agentic SEO system that runs these checks
+- [AI agents in marketing, 2026](https://growthofinfluence.com/ai-agents-marketing-2026/)
+
+**Pairs with** [agency-os](https://github.com/growthofinfluence/agency-os): a shared company vault for Claude Code, so every session starts knowing the company.
+
+**Primary sources behind the rules**
+
+- [Directive 2005/29/EC on unfair commercial practices](https://eur-lex.europa.eu/eli/dir/2005/29/oj)
+- [Directive 2002/58/EC on privacy and electronic communications](https://eur-lex.europa.eu/eli/dir/2002/58/oj)
+- [Regulation (EU) 2016/679 (GDPR)](https://eur-lex.europa.eu/eli/reg/2016/679/oj)
+- [Google Search Central: SEO starter guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)
+- [Google Search Central: AI features and your website](https://developers.google.com/search/docs/appearance/ai-features)
+
+**Built on** [Claude Code hooks](https://code.claude.com/docs/en/hooks), [Claude Code plugins](https://code.claude.com/docs/en/plugins), [GitHub Actions](https://docs.github.com/en/actions) and [pre-commit](https://pre-commit.com/).
+
+**Cite it:** see [CITATION.cff](CITATION.cff), or use GitHub's "Cite this repository" button.
+**More open source:** [github.com/growthofinfluence](https://github.com/growthofinfluence)
+
 ## Contributing
 
 Issues and pull requests are welcome, especially false positives (with the smallest text that triggers them) and
@@ -319,7 +345,7 @@ new rules with a primary source. Read [CONTRIBUTING.md](CONTRIBUTING.md) and the
 agency-guardrails is built and maintained by [Chris Fountoulis](https://chrisfountoulis.com), founder of
 [Growth Of Influence](https://growthofinfluence.com), a digital marketing agency in Thessaloniki. AI agents write
 the first draft there and these guardrails decide what reaches a human reviewer. If you want to run the same
-setup in your own agency, [book a call](https://growthofinfluence.com/meeting).
+setup in your own agency, [book a call](https://growthofinfluence.com/book-a-call/).
 
 <p align="center">
   <img src=".github/assets/footer.svg" alt="agency-guardrails footer: Growth Of Influence" width="100%">
@@ -328,5 +354,5 @@ setup in your own agency, [book a call](https://growthofinfluence.com/meeting).
 <p align="center">
   Built by <a href="https://chrisfountoulis.com">Chris Fountoulis</a> at
   <a href="https://growthofinfluence.com">Growth Of Influence</a> ·
-  <a href="https://github.com/chris-fountoulis">GitHub</a>
+  <a href="https://github.com/growthofinfluence">GitHub</a>
 </p>

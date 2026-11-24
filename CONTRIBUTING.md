@@ -11,7 +11,7 @@ citations are all welcome.
 ## Development setup
 
 ```bash
-git clone https://github.com/chris-fountoulis/agency-guardrails
+git clone https://github.com/growthofinfluence/agency-guardrails
 cd agency-guardrails
 python3 -m venv .venv && . .venv/bin/activate
 pip install -e .

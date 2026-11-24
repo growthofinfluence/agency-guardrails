@@ -35,14 +35,14 @@ notices later" to "the agent cannot do it, or fixes it in the same turn".
 The repository is both a Claude Code plugin and a one-plugin marketplace. In Claude Code:
 
 ```text
-/plugin marketplace add chris-fountoulis/agency-guardrails
+/plugin marketplace add growthofinfluence/agency-guardrails
 /plugin install agency-guardrails@agency-guardrails
 ```
 
 From a terminal, the `claude` CLI does both steps at once:
 
 ```bash
-claude plugin install agency-guardrails --marketplace chris-fountoulis/agency-guardrails
+claude plugin install agency-guardrails --marketplace growthofinfluence/agency-guardrails
 ```
 
 The plugin needs `python3` (3.9 or newer) on the PATH. It runs the copy of the package bundled in the plugin
@@ -51,7 +51,7 @@ directory through `hooks/guardrails_hook.py`, so there is nothing to pip install
 
 ## Option 2: settings.json with the CLI
 
-Install the CLI (`pipx install git+https://github.com/chris-fountoulis/agency-guardrails`) and add this to
+Install the CLI (`pipx install git+https://github.com/growthofinfluence/agency-guardrails`) and add this to
 `.claude/settings.json` in the project , or `~/.claude/settings.json` for every project:
 
 ```json

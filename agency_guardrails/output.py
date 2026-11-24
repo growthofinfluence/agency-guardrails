@@ -9,7 +9,7 @@ from typing import Any, Dict, Iterable, List, Optional
 from agency_guardrails import __version__, registry
 from agency_guardrails.model import ERROR, Finding, Rule
 
-TOOL_URI = "https://github.com/chris-fountoulis/agency-guardrails"
+TOOL_URI = "https://github.com/growthofinfluence/agency-guardrails"
 SARIF_SCHEMA = "https://json.schemastore.org/sarif-2.1.0.json"
 
 _COLORS = {"error": "\033[31m", "warn": "\033[33m", "dim": "\033[2m", "bold": "\033[1m", "reset": "\033[0m"}

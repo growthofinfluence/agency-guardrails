@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v7
 
       - name: Lint content with agency-guardrails
-        uses: chris-fountoulis/agency-guardrails@v0.1.0
+        uses: growthofinfluence/agency-guardrails@v0.1.0
         with:
           paths: content site
           upload-sarif: "true"

@@ -6,6 +6,12 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Changed
+
+- Every repository URL, badge, install command, action reference and citation now points at `growthofinfluence/agency-guardrails`.
+- README: added "Learn more and references" with the Growth Of Influence guides, the primary sources behind the rules, and agency-os.
+- Package and citation metadata list Growth Of Influence as an author and link to the website.
+
 ## [0.1.0] - 2026-10-30
 
 First public release.
@@ -36,5 +42,5 @@ First public release.
 - pre-commit hook definition.
 - Sample site in `examples/site/` with a bad and a fixed version, used by the README demo and CI.
 
-[Unreleased]: https://github.com/chris-fountoulis/agency-guardrails/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/chris-fountoulis/agency-guardrails/releases/tag/v0.1.0
+[Unreleased]: https://github.com/growthofinfluence/agency-guardrails/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/growthofinfluence/agency-guardrails/releases/tag/v0.1.0

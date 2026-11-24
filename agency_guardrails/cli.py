@@ -143,7 +143,7 @@ def build_parser() -> argparse.ArgumentParser:
         prog="guardrails",
         description="Lint your marketing like you lint your code: business, legal and house-style rules "
         "for content written and shipped by AI agents.",
-        epilog="Engineering tooling, not legal advice. Docs: https://github.com/chris-fountoulis/agency-guardrails",
+        epilog="Engineering tooling, not legal advice. Docs: https://github.com/growthofinfluence/agency-guardrails",
     )
     parser.add_argument("--version", action="version", version="guardrails %s" % __version__)
     sub = parser.add_subparsers(dest="command", metavar="<command>")

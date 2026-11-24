@@ -1,7 +1,7 @@
 """The starter config written by ``guardrails init``."""
 
 STARTER_CONFIG = r'''# guardrails.toml: agency-guardrails configuration.
-# Reference: https://github.com/chris-fountoulis/agency-guardrails/blob/main/docs/rules.md
+# Reference: https://github.com/growthofinfluence/agency-guardrails/blob/main/docs/rules.md
 # These rules are engineering heuristics, not legal advice.
 
 [guardrails]

@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: chris-fountoulis/agency-guardrails@v0.1.0
+      - uses: growthofinfluence/agency-guardrails@v0.1.0
         with:
           paths: content site
 ```
@@ -83,7 +83,7 @@ permissions:
 
 steps:
   - uses: actions/checkout@v7
-  - uses: chris-fountoulis/agency-guardrails@v0.1.0
+  - uses: growthofinfluence/agency-guardrails@v0.1.0
     with:
       upload-sarif: "true"
 ```
@@ -107,7 +107,7 @@ To lint only the files a pull request touches, compute the list first and pass i
     files=$(git diff --name-only --diff-filter=AM origin/${{ github.base_ref }}...HEAD -- '*.md' '*.html' | tr '\n' ' ')
     echo "files=$files" >> "$GITHUB_OUTPUT"
 - if: steps.changed.outputs.files != ''
-  uses: chris-fountoulis/agency-guardrails@v0.1.0
+  uses: growthofinfluence/agency-guardrails@v0.1.0
   with:
     paths: ${{ steps.changed.outputs.files }}
 ```
@@ -117,7 +117,7 @@ To lint only the files a pull request touches, compute the list first and pass i
 The action is a thin wrapper. Any CI system can run the same thing:
 
 ```bash
-pip install git+https://github.com/chris-fountoulis/agency-guardrails
+pip install git+https://github.com/growthofinfluence/agency-guardrails
 guardrails check --format github --sarif-file guardrails.sarif content site
 ```
 
